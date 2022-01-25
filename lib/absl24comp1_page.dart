@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'src/item.dart';
 
 class Absl24Comp1Page extends StatefulWidget {
   @override
@@ -6,43 +7,31 @@ class Absl24Comp1Page extends StatefulWidget {
 }
 
 class _Absl24Comp1PageState extends State<Absl24Comp1Page> {
-  bool cklaco = false;
-  bool airbag = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.amber[50],
-        appBar: AppBar(
-          title: Text('COMPARTIMENTO  1'),
-          centerTitle: true,
-        ),
-        body: ListView(
-          children: <Widget>[
-            Card(
-              color: Colors.amber[100],
+      backgroundColor: Colors.amber[50],
+      appBar: AppBar(
+        title: Text('COMPARTIMENTO  1'),
+        centerTitle: true,
+      ),
+      body: ListView.builder(
+          itemCount: absl24.length,
+          itemBuilder: (context, index) {
+            //final vtr = absl24[index];
+            return Card(
               child: CheckboxListTile(
-                value: cklaco,
                 onChanged: (value) {
                   setState(() {
-                    cklaco = value!;
+                    absl24[index].done = value!;
                   });
                 },
-                title: Text('Laço para Captura de animais'),
+                value: absl24[index].done,
+                title: Text(absl24[index].nome),
+                subtitle: Text(absl24[index].quantidade.toString()),
               ),
-            ),
-            Card(
-              color: Colors.amber[100],
-              child: CheckboxListTile(
-                value: airbag,
-                onChanged: (value) {
-                  setState(() {
-                    airbag = value!;
-                  });
-                },
-                title: Text('Protetor de AirBag'),
-              ),
-            ),
-          ],
-        ));
+            );
+          }),
+    );
   }
 }
