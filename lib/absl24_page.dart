@@ -2,8 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'absl24comp1_page.dart';
+import 'src/item.dart';
 
-class ABSL24Page extends StatelessWidget {
+class ABSL24Page extends StatefulWidget {
+  @override
+  State<ABSL24Page> createState() => _ABSL24PageState();
+}
+
+class _ABSL24PageState extends State<ABSL24Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

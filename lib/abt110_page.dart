@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'item.dart';
+import 'src/item.dart';
 
 class Abt110Page extends StatelessWidget {
   @override
@@ -60,6 +60,7 @@ class _AbtHomePageState extends State<AbtHomePage> {
                   body: Column(
                     children: [
                       ListView.builder(
+                          physics: ClampingScrollPhysics(),
                           shrinkWrap: true,
                           itemCount: absl24.length,
                           itemBuilder: (context, index) {

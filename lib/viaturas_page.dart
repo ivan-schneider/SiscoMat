@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'absl24_page.dart';
+import 'abt110_page.dart';
 
 class ViaturasPage extends StatelessWidget {
   @override
@@ -31,7 +32,10 @@ class ViaturasPage extends StatelessWidget {
                   ),
                   minimumSize: Size(300, 60),
                   primary: Colors.deepOrange[400]),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Abt110Page()));
+              },
             ),
             ElevatedButton(
               child: Text(
