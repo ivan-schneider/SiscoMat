@@ -24,18 +24,20 @@ class AbtHomePage extends StatefulWidget {
 
 class _AbtHomePageState extends State<AbtHomePage> {
   List<ExpansionItem> itens = <ExpansionItem>[
-    ExpansionItem(header: 'Compartimento Superior', body: 'Teste de Corpo'),
-    ExpansionItem(header: 'Compartimento 1', body: 'Teste do compartimento 1'),
-    ExpansionItem(header: 'Compartimento Superior', body: 'Teste de Corpo'),
-    ExpansionItem(header: 'Compartimento 1', body: 'Teste do compartimento 1'),
-    ExpansionItem(header: 'Compartimento Superior', body: 'Teste de Corpo'),
-    ExpansionItem(header: 'Compartimento 1', body: 'Teste do compartimento 1'),
-    ExpansionItem(header: 'Compartimento Superior', body: 'Teste de Corpo'),
-    ExpansionItem(header: 'Compartimento 1', body: 'Teste do compartimento 1'),
-    ExpansionItem(header: 'Compartimento Superior', body: 'Teste de Corpo'),
-    ExpansionItem(header: 'Compartimento 1', body: 'Teste do compartimento 1'),
-    ExpansionItem(header: 'Compartimento Superior', body: 'Teste de Corpo'),
-    ExpansionItem(header: 'Compartimento 1', body: 'Teste do compartimento 1')
+    ExpansionItem(header: 'Cabine'),
+    ExpansionItem(header: 'Caixa de Ferramentas'),
+    ExpansionItem(header: 'Compartimento 1'),
+    ExpansionItem(header: 'Compartimento 2'),
+    ExpansionItem(header: 'Compartimento 3'),
+    ExpansionItem(header: 'Compartimento 4'),
+    ExpansionItem(header: 'Compartimento 5'),
+    ExpansionItem(header: 'Compartimento 6'),
+    ExpansionItem(header: 'Compartimento 7'),
+    ExpansionItem(header: 'Compartimento 8'),
+    ExpansionItem(header: 'Compartimento 9'),
+    ExpansionItem(header: 'Compartimento 10'),
+    ExpansionItem(header: 'Compartimento 11'),
+    ExpansionItem(header: 'Compartimento Superior')
   ];
 
   @override
@@ -53,7 +55,18 @@ class _AbtHomePageState extends State<AbtHomePage> {
                 return ExpansionPanel(
                   headerBuilder: (BuildContext context, bool isExpanded) {
                     return Container(
-                      child: Text(item.header),
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            left: 15, bottom: 0, top: 10, right: 0),
+                        child: Text(
+                          item.header,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                      ),
                     );
                   },
                   isExpanded: item.isExpanded,
@@ -66,6 +79,7 @@ class _AbtHomePageState extends State<AbtHomePage> {
                           itemBuilder: (context, index) {
                             return Card(
                               child: CheckboxListTile(
+                                secondary: Text('${index + 1}'),
                                 onChanged: (value) {
                                   setState(() {
                                     absl24[index].done = value!;
@@ -73,8 +87,9 @@ class _AbtHomePageState extends State<AbtHomePage> {
                                 },
                                 value: absl24[index].done,
                                 title: Text(absl24[index].nome),
-                                subtitle:
-                                    Text(absl24[index].quantidade.toString()),
+                                subtitle: Text(
+                                    absl24[index].quantidade.toString() +
+                                        '  und.'),
                               ),
                             );
                           }),
@@ -91,8 +106,6 @@ class _AbtHomePageState extends State<AbtHomePage> {
 class ExpansionItem {
   bool isExpanded;
   final String header;
-  final String body;
 
-  ExpansionItem(
-      {this.isExpanded = false, required this.header, required this.body});
+  ExpansionItem({this.isExpanded = false, required this.header});
 }

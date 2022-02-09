@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SiSconMaT',
-      theme: ThemeData(primarySwatch: Colors.teal),
+      theme: ThemeData(primaryColor: Color.fromARGB(255, 10, 146, 15)),
       home: HomePage(),
     );
   }

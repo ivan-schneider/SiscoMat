@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber[50],
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 173, 24, 14),
         title: Text('SisconMat 10° GBM - Paranoá'),
         centerTitle: true,
       ),

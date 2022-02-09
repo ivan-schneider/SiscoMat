@@ -21,6 +21,7 @@ class _Absl24Comp1PageState extends State<Absl24Comp1Page> {
             //final vtr = absl24[index];
             return Card(
               child: CheckboxListTile(
+                secondary: Text('${index + 1}'),
                 onChanged: (value) {
                   setState(() {
                     absl24[index].done = value!;
@@ -28,7 +29,7 @@ class _Absl24Comp1PageState extends State<Absl24Comp1Page> {
                 },
                 value: absl24[index].done,
                 title: Text(absl24[index].nome),
-                subtitle: Text(absl24[index].quantidade.toString()),
+                subtitle: Text(absl24[index].quantidade.toString() + '  und.'),
               ),
             );
           }),
