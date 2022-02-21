@@ -1,8 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'absl24comp1_page.dart';
-import 'src/item.dart';
+import 'src/compartsabsl.dart';
 
 class ABSL24Page extends StatefulWidget {
   @override
@@ -20,7 +19,7 @@ class _ABSL24PageState extends State<ABSL24Page> {
       ),
       body: SingleChildScrollView(
         child: ExpansionPanelList.radio(
-          children: itens.map((expansionItem) {
+          children: compartimentos.map((expansionItem) {
             return ExpansionPanelRadio(
                 value: expansionItem.header,
                 headerBuilder: (context, isExpanded) {
@@ -44,7 +43,7 @@ class ExpansionItem {
   ExpansionItem({this.isExpanded = false, required this.header, this.body});
 }
 
-List<ExpansionItem> itens = <ExpansionItem>[
+List<ExpansionItem> compartimentos = <ExpansionItem>[
   ExpansionItem(header: 'Compartimento 1', body: Comp1()),
   ExpansionItem(header: 'Compartimento 2', body: Comp2()),
   ExpansionItem(header: 'Compartimento 3', body: Comp3()),

@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(60),
                   ),
                   minimumSize: Size(300, 60),
-                  primary: Colors.deepOrange[400]),
+                  primary: Color.fromARGB(255, 173, 24, 14)),
               onPressed: () {},
             ),
             ElevatedButton(
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                   minimumSize: Size(300, 60),
-                  primary: Colors.deepOrange[400]),
+                  primary: Color.fromARGB(255, 173, 24, 14)),
               onPressed: () {},
             ),
             ElevatedButton(
@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(60),
                   ),
                   minimumSize: Size(300, 60),
-                  primary: Colors.deepOrange[400]),
+                  primary: Color.fromARGB(255, 173, 24, 14)),
               onPressed: () {},
             ),
             ElevatedButton(
@@ -93,7 +93,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(60),
                   ),
                   minimumSize: Size(300, 60),
-                  primary: Colors.deepOrange[400]),
+                  primary: Color.fromARGB(255, 173, 24, 14)),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DepositosPage()));
@@ -113,7 +113,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(60),
                   ),
                   minimumSize: Size(300, 60),
-                  primary: Colors.deepOrange[400]),
+                  primary: Color.fromARGB(255, 173, 24, 14)),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => ViaturasPage()));
