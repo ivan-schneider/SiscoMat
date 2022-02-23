@@ -3,18 +3,13 @@
 import 'package:flutter/material.dart';
 import 'src/compartsabsl.dart';
 
-class ABSL24Page extends StatefulWidget {
-  @override
-  State<ABSL24Page> createState() => _ABSL24PageState();
-}
-
-class _ABSL24PageState extends State<ABSL24Page> {
+class ABSL24Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber[50],
       appBar: AppBar(
-        title: Text('ABSL   24'),
+        title: const Text('AR 115'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -23,9 +18,7 @@ class _ABSL24PageState extends State<ABSL24Page> {
             return ExpansionPanelRadio(
                 value: expansionItem.header,
                 headerBuilder: (context, isExpanded) {
-                  return Container(
-                    child: Text(expansionItem.header),
-                  );
+                  return Text(expansionItem.header);
                 },
                 body: expansionItem.body);
           }).toList(),

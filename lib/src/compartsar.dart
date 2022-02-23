@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Materiais {
   String nome;
   int quantidade;
@@ -14,50 +16,104 @@ List<Materiais> cxferramentas = [
   Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
 ];
 
-List<Materiais> compartimento1 = [
+List<Materiais> carroceria = [
   Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
 ];
 
-List<Materiais> compartimento2 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
+class Cabine extends StatefulWidget {
+  @override
+  State<Cabine> createState() => _CabineState();
+}
 
-List<Materiais> compartimento3 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
+class _CabineState extends State<Cabine> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      ListView.builder(
+          physics: ClampingScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: cabine.length,
+          itemBuilder: (context, index) {
+            return Card(
+              child: CheckboxListTile(
+                secondary: Text('${index + 1}'),
+                onChanged: (value) {
+                  setState(() {
+                    cabine[index].done = value!;
+                  });
+                },
+                value: cabine[index].done,
+                title: Text(cabine[index].nome),
+                subtitle: Text(cabine[index].quantidade.toString() + '  und.'),
+              ),
+            );
+          }),
+    ]);
+  }
+}
 
-List<Materiais> compartimento4 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
+class CaixadeFerramentas extends StatefulWidget {
+  @override
+  State<CaixadeFerramentas> createState() => _CaixadeFerramentasState();
+}
 
-List<Materiais> compartimento5 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
+class _CaixadeFerramentasState extends State<CaixadeFerramentas> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      ListView.builder(
+          physics: ClampingScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: cxferramentas.length,
+          itemBuilder: (context, index) {
+            return Card(
+              child: CheckboxListTile(
+                secondary: Text('${index + 1}'),
+                onChanged: (value) {
+                  setState(() {
+                    cxferramentas[index].done = value!;
+                  });
+                },
+                value: cxferramentas[index].done,
+                title: Text(cxferramentas[index].nome),
+                subtitle:
+                    Text(cxferramentas[index].quantidade.toString() + '  und.'),
+              ),
+            );
+          }),
+    ]);
+  }
+}
 
-List<Materiais> compartimento6 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
+class Carroceria extends StatefulWidget {
+  @override
+  State<Carroceria> createState() => _CarroceriaState();
+}
 
-List<Materiais> compartimento7 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
-
-List<Materiais> compartimento8 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
-
-List<Materiais> compartimento9 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
-
-List<Materiais> compartimento10 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
-
-List<Materiais> compartimento11 = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
-
-List<Materiais> partesuperior = [
-  Materiais(nome: 'Cilindro 9L', quantidade: 3, done: false)
-];
+class _CarroceriaState extends State<Carroceria> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      ListView.builder(
+          physics: ClampingScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: carroceria.length,
+          itemBuilder: (context, index) {
+            return Card(
+              child: CheckboxListTile(
+                secondary: Text('${index + 1}'),
+                onChanged: (value) {
+                  setState(() {
+                    carroceria[index].done = value!;
+                  });
+                },
+                value: carroceria[index].done,
+                title: Text(carroceria[index].nome),
+                subtitle:
+                    Text(carroceria[index].quantidade.toString() + '  und.'),
+              ),
+            );
+          }),
+    ]);
+  }
+}

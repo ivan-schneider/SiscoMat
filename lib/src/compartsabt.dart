@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sisconmat/src/compartsabt.dart';
 
 class Materiais {
   String nome;

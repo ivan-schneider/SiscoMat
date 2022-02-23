@@ -7,7 +7,7 @@ class Abt110Page extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber[50],
       appBar: AppBar(
-        title: const Text('ABT   110'),
+        title: const Text('ABT 110'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -16,9 +16,7 @@ class Abt110Page extends StatelessWidget {
             return ExpansionPanelRadio(
                 value: expansionItem.header,
                 headerBuilder: (context, isExpanded) {
-                  return Container(
-                    child: Text(expansionItem.header),
-                  );
+                  return Text(expansionItem.header);
                 },
                 body: expansionItem.body);
           }).toList(),
@@ -50,5 +48,5 @@ List<ExpansionItem> compartimentos = <ExpansionItem>[
   ExpansionItem(header: 'Compartimento 9', body: Comp9()),
   ExpansionItem(header: 'Compartimento 10', body: Comp10()),
   ExpansionItem(header: 'Compartimento 11', body: Comp11()),
-  ExpansionItem(header: 'Compartimento Superior', body: ParteSuperior()),
+  ExpansionItem(header: 'Compartimento Superior', body: ParteSuperior())
 ];

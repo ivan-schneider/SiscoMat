@@ -1,8 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:sisconmat/abe110_page.dart';
+import 'package:sisconmat/ar115_page.dart';
 import 'absl24_page.dart';
 import 'abt110_page.dart';
+import 'ase110_page.dart';
 
 class ViaturasPage extends StatelessWidget {
   @override
@@ -52,7 +55,10 @@ class ViaturasPage extends StatelessWidget {
                   ),
                   minimumSize: Size(300, 60),
                   primary: Colors.deepOrange[400]),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Ase110Page()));
+              },
             ),
             ElevatedButton(
               child: Text(
@@ -89,7 +95,30 @@ class ViaturasPage extends StatelessWidget {
                   ),
                   minimumSize: Size(300, 60),
                   primary: Colors.deepOrange[400]),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Abe110Page()));
+              },
+            ),
+            ElevatedButton(
+              child: Text(
+                "AR 115",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(60),
+                  ),
+                  minimumSize: Size(300, 60),
+                  primary: Colors.deepOrange[400]),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Ar115Page()));
+              },
             ),
           ],
         ),
