@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:sisconmat/baixados_page.dart';
 import 'depositos_page.dart';
 import 'viaturas_page.dart';
 
@@ -43,7 +44,10 @@ class HomePage extends StatelessWidget {
                   ),
                   minimumSize: Size(300, 60),
                   primary: Color.fromARGB(255, 173, 24, 14)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BaixadosPage()));
+              },
             ),
             ElevatedButton(
               child: Text(

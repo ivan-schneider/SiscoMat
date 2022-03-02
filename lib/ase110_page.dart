@@ -7,7 +7,7 @@ class Ase110Page extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber[50],
       appBar: AppBar(
-        title: const Text('ASE   110'),
+        title: const Text('ASE 110'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
